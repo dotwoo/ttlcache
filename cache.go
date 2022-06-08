@@ -102,7 +102,7 @@ func (cache *Cache) getItem(key string) (*item, bool, bool) {
 		item.ttl = cache.ttl
 	}
 
-	item.touch()
+	//item.touch()
 
 	oldExpireTime := cache.priorityQueue.root().expireAt
 	cache.priorityQueue.update(item)
